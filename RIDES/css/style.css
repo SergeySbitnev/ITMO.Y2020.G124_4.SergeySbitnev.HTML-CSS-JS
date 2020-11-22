@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+  margin: 2rem;
+  font: 500 125% system-ui, sans-serif;
+}
+header{
+  background: white;
+}
+.news{
+  background: white;
+}
+.page-wrapper {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-areas:
+    "snowboard bike";
+}
+.page-wrapper > * {
+  background: white;
+  padding: 1rem;
+}
+@media (max-width: 700px) {
+  .page-wrapper {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "snowboard"
+      "bike";
+}
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
