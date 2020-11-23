@@ -9,6 +9,10 @@ body {
 header{
   background: white;
 }
+section{
+  background: white;
+  padding: 10px;
+}
 .news{
   background: white;
 }
