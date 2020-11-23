@@ -9,6 +9,10 @@ body {
 header{
   background: white;
 }
+main{
+  background: white;
+  padding: 10px;
+}
 section{
   background: white;
   padding: 10px;
