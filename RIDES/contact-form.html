@@ -2,9 +2,10 @@
   <head>
     <meta charset="utf-8">
     <title>RIDES - сайт покатушек.</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <link rel="stylesheet" href="css/style.css">
+
   <body>
     <table width=100%>
       <tr align="center">
@@ -27,11 +28,23 @@
 
     <section>
       <h1>Форма обратной связи</h1>
-      <form action="send-form.php" method="post">
-        <input name="FIO" placeholder="ФИО"><br>
-        <input name="adress" placeholder="Электронный адрес"><br>
-        <input name="telefon" placeholder="Телефон">
-
+      <form name="form" action="#" method="post" id="form_message">
+        <p> <div class="titles">Ваше имя*</div> <input class="input" name="name" type="text"/> </p>
+        <p> <div class="titles">Электронная почта*</div> <input class="input" name="email" type="text"/> </p>
+        <p> <div class="titles">Телефон*</div> <input class="input" name="phone" type="text"/> </p>
+        <label>Средство для обратной связи</label><br>
+        <label>
+          <input type="radio" name="status">Электронная почта
+        </label>
+        <label>
+          <input type="radio" name="status">Телефон
+        </label>
+        <p> <div class="titles">Тема сообщения</div> <input class="input" name="subjects" type="text"/> </p>
+        <p> <div class="titles">Текст сообщения:</div><textarea name="message" cols="22" rows="5" /></textarea></p>
+        <label>
+          <input type="checkbox">Согласен на обработку персональных данных
+        </label>
+        <p><input id="submit" value="Отправить" type="submit" /></p>
       </form>
     </section>
 

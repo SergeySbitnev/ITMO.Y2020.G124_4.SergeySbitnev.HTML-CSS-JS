@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+h1{
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
 body {
   background: #eee;
   margin: 2rem;

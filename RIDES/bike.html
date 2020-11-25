@@ -2,9 +2,10 @@
   <head>
     <meta charset="utf-8">
     <title>RIDES - сайт покатушек.</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <link rel="stylesheet" href="css/style.css">
+
   <body>
     <table width=100%>
       <tr align="center">
@@ -23,12 +24,41 @@
         <button><img src="images/search.jpg" width=10px> Найти</button>
 
       </h1>
-
-
     </header>
+
+    <P>Выбор цвета фона</P>
+    <FORM>
+      <INPUT type="button" value="Red" onClick="get_color(0)">
+      <INPUT type="button" value="Yellow" onClick="get_color(1)">
+      <INPUT type="button" value="Green" onClick="get_color(2)">
+      <INPUT type="button" value="Aqua" onClick="get_color(3)">
+      <INPUT type="button" value="Blue" onClick="get_color(4)">
+    </FORM>
+
+  <center><font size="4"><a href="JSdinamic.html">Назад</a>
+  </font></center><br><br>
+
 
 
 
 
     <footer align="center">&copy; Copyright SSV 2020</footer>
+
+
+    <SCRIPT language="JavaScript">
+    <!--
+    function get_color(color_num)
+    {
+      var now_color=color_num;
+      var my_color= new Array(5)
+      my_color[0]="red";
+      my_color[1]="yellow";
+      my_color[2]="green";
+      my_color[3]="aqua";
+      my_color[4]="blue";
+      document.bgColor=my_color[now_color];
+    }
+    //-->
+  </SCRIPT>
+</body>
 </html>
