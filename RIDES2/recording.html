@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__contacts">
+                    <a class="header__phone" href="tel:89818780010">+7 (981) 878 00 10</a>
+                    <a class="header__email" href="#">sergeysbitnev@mail.ru</a>
+                    <a class="header__btn" href="recording.html">Записаться на покатушки</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__content">
+            <div class="container">
+                <div class="header__content-inner">
+
+                    <div class="header logo">
+                        <a href="index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="contextMenu">
+                        <a href="#" class="clickMenu"><img src="img/menu.jpg" alt=""></a>
+
+
+                        <div id="visibleMenu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="snowboard.html">Snowboard</a></li>
+                                <li><a href="bike.html">Bike</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="recording.html">Recording</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="snowboard.html">Snowboard</a></li>
+                            <li><a href="bike.html">Bike</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <center>
+            <form action="post">
+                <fieldset>
+                    <legend align="right">Форма записи на покатушки</legend>
+                    <table>
+                        <tr>
+                            <td><label for="name">Введите имя:</label></td>
+                            <td><input id="name" type="text" placeholder="Имя"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="mail">Введите email</label></td>
+                            <td><input id="mail" type="email" placeholder="Почта"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Введите телефон</label></td>
+                            <td><input type="phone" placeholder="Телефон"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="comments">Комментарии</label></td>
+                            <td><textarea name="" id="comments" cols="50" rows="7" placeholder="Комментарии"></textarea></td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="storage">Записаться</button>
+                </fieldset>
+            </form>
+        </center>
+        <br>
+    </main>
+
+    <footer align="center">&copy; Copyright SSV 2020</footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/LocalStorage.js"></script>
+</body>
+
+</html>
