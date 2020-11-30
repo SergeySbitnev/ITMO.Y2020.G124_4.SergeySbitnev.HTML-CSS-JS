@@ -66,7 +66,8 @@
     <main>
         <br>
         <center>
-            <form action="post">
+
+            <form>
                 <fieldset>
                     <legend align="right">Форма записи на покатушки</legend>
                     <table>
@@ -80,25 +81,63 @@
                         </tr>
                         <tr>
                             <td><label for="phone">Введите телефон</label></td>
-                            <td><input type="phone" placeholder="Телефон"></td>
+                            <td><input id="phone" type="phone" placeholder="Телефон"></td>
                         </tr>
                         <tr>
                             <td><label for="comments">Комментарии</label></td>
-                            <td><textarea name="" id="comments" cols="50" rows="7" placeholder="Комментарии"></textarea></td>
+                            <td><textarea name="" id="comments" cols="50" rows="7" placeholder="Комментарии"></textarea>
+                            </td>
                         </tr>
                     </table>
-                    <button type="submit" class="storage">Записаться</button>
+                    <input type="submit" id="button" value="Записаться" />
                 </fieldset>
             </form>
         </center>
+        <section id="display_data">
+
+        </section>
+
+
         <br>
     </main>
 
     <footer align="center">&copy; Copyright SSV 2020</footer>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/LocalStorage.js"></script>
+    <script>
+        function doFirst() {
+            var button = document.getElementById('button');
+            button.addEventListener("click", save, false);
+            display();
+
+        }
+
+        function save() {
+            var name = document.getElementById('name').value;
+            var mail = document.getElementById('mail').value;
+            var phone = document.getElementById('phone');
+            var comments = document.getElementById('comments');
+            sessionStorage.setItem(name, mail);
+            display();
+            name.value = "";
+            mail.value = "";
+            phone.value = "";
+            comments.value = "";
+
+        }
+
+        function display() {
+            var display_data = document.getElementById('display_data');
+            display_data.innerHTML = "";
+            for (var i = 0; i < sessionStorage.length; i++) {
+                var a = sessionStorage.key(i);
+                var b = sessionStorage.getItem(a);
+                display_data.innerHTML += a + " - " + b + "<br>";
+            }
+        }
+
+        window.addEventListener("load", doFirst, false);
+
+    </script>
 </body>
 
 </html>
